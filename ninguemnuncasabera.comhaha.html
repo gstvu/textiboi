@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Terror</title>
+    <style>
+        /* Reset básico de margin e padding */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            background-color: #000; /* Fundo preto */
+            color: #f00; /* Texto em vermelho */
+            overflow: hidden; /* Evita rolagem, mantém o foco na página */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            animation: flicker 1s infinite; /* Efeito de cintilação */
+        }
+
+        .link {
+            color: #f00; /* Vermelho para o link */
+            font-size: 2em;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: bold;
+            border: 2px solid #f00;
+            padding: 10px;
+            transition: color 0.3s, background-color 0.3s;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Sombra vermelha */
+        }
+
+        .link:hover {
+            color: #000;
+            background-color: #f00;
+        }
+
+        .photo-container {
+            margin-top: 20px;
+        }
+
+        .photo-container img {
+            max-width: 100%;
+            height: auto;
+            border: 3px solid #f00; /* Borda vermelha em volta da imagem */
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.8); /* Sombra vermelha */
+        }
+
+        /* Animação de cintilação */
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        /* Efeito de texto perturbador */
+        @keyframes shake {
+            0% { transform: translateX(-2px); }
+            25% { transform: translateX(2px); }
+            50% { transform: translateX(-2px); }
+            75% { transform: translateX(2px); }
+            100% { transform: translateX(0); }
+        }
+
+        .link-shake {
+            animation: shake 0.5s infinite; /* Efeito de tremor */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://media.tenor.com/5R5jeSOLR1QAAAAe/meme-shitpost.png" class="link link-shake" target="_blank">astrevasesperamporvoce المتداول ببطء</a>
+        <div class="photo-container">
+            <img src="https://img.freepik.com/fotos-gratis/retrato-de-infeliz-jovem-mulher-caucasiana-bonita-com-longos-cabelos-escuros-na-camiseta-cinza-casual-roendo-os-dedos-com-expressao-de-medo_176420-10850.jpg" alt="Imagem de Terror">
+        </div>
+    </div>
+</body>
+</html>
